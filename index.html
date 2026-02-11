@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Video Gallery</title>
+    <style>
+        /* Basic styling to make videos look good */
+        iframe { width: 100%; max-width: 560px; height: 315px; margin: 10px; border: none; }
+        #videoContainer { display: flex; flex-wrap: wrap; justify-content: center; }
+        nav { margin-bottom: 20px; text-align: center; }
+        button { padding: 10px 20px; cursor: pointer; margin: 5px; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <button onclick="loadSection('solar')">Solar Energy</button>
+        <button onclick="loadSection('geo')">Geophysics</button>
+        <button onclick="loadSection('ai')">AI Basics</button>
+        <button onclick="loadSection('entre')">Entrepreneurship</button>
+    </nav>
+
+    <div id="welcome">
+        <h1>Welcome to the Video Library</h1>
+        <p>Please select a category above to begin.</p>
+    </div>
+
+    <div id="videoSection" style="display:none;">
+        <h2 id="sectionTitle"></h2>
+        <div id="videoContainer"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
